@@ -2,17 +2,24 @@ package com.romsteam.clicker.gameObjects.item;
 
 import com.romsteam.clicker.gameObjects.Item;
 import com.romsteam.clicker.gameObjects.gameExceptions.RegistryException;
+import lombok.ToString;
 
 import java.util.HashMap;
-
+@ToString
 public class ItemRegistry{
     HashMap<Long, Item> itemRegistry = new HashMap<>();
 
-    public Item getItem(Long id){
-        return itemRegistry.get(id);
+    public Item getItem(Long id) throws RegistryException {
+        Item item = itemRegistry.get(id);
+        if(item==null)
+            throw new RegistryException(RegistryException.NO_ITEM_WITH_THIS_ID(id));
+        return item;
     }
-    public void addNewItem(Long id, Item item){
-        if(itemRegistry.containsKey(id))
-            throw new RegistryException("Error trying to register item :"+item.getName()+" because Id :"+id+" is already given to item :"+itemRegistry.get(id).getName());
+    public void addNewItem(Item item) throws RegistryException {
+        if(itemRegistry.containsKey(item.getId()))
+            throw new RegistryException("Error trying to register item :"+item.getName()+" because Id :"+item.getId()+" is already given to item :"+itemRegistry.get(item.getId()).getName());
+        itemRegistry.put(item.getId(),item);
     }
+
+
 }
