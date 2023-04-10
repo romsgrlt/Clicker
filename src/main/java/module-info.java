@@ -3,7 +3,8 @@ module com.romsteam.clicker {
     requires javafx.fxml;
             
                 requires net.synedra.validatorfx;
-                    
+    requires lombok;
+
     opens com.romsteam.clicker to javafx.fxml;
     exports com.romsteam.clicker;
 }
