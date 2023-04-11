@@ -2,8 +2,12 @@ package com.romsteam.clicker;
 
 import lombok.Getter;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseEvent;
+
 @Getter
 public class GameContainer implements Runnable {
+
     //Window Settings
     private int width = 320, height = 240;
     private float scale = 3.25f;
@@ -13,14 +17,18 @@ public class GameContainer implements Runnable {
     private Thread thread;
     private Window window;
     private Renderer renderer;
+    private Input input;
 
     private boolean running = false;
     private final int FPS = 60;
     private final double UPDATE_CAP = 1.0/FPS;
 
+
     public void start(){
         window = new Window(this);
         renderer = new Renderer(this);
+        input = new Input(this);
+
         thread = new Thread(this);
         thread.run();
     }
@@ -54,7 +62,13 @@ public class GameContainer implements Runnable {
             while(unprocessedTime >= UPDATE_CAP){
                 unprocessedTime -= UPDATE_CAP;
                 render = true;
+
                 //TODO: update game
+
+                checkInputs();
+
+                input.update();
+
                 if(frameTime >= 1.0){
                     frameTime=0;
                     fps = frames;
@@ -77,9 +91,30 @@ public class GameContainer implements Runnable {
         }
         dispose();
     }
+
+    private void checkInputs() {
+
+        if(input.isKeyDown(KeyEvent.VK_Z))
+            System.out.println("FORWARD");
+        if(input.isKeyDown(KeyEvent.VK_Q))
+            System.out.println("LEFT");
+        if(input.isKeyDown(KeyEvent.VK_S))
+            System.out.println("BACKWARD");
+        if(input.isKeyDown(KeyEvent.VK_D))
+            System.out.println("RIGHT");
+        if(input.getScroll()!=0)
+            System.out.println(input.getScroll());
+        if(input.isButtonDown(MouseEvent.BUTTON1))
+            System.out.println("LEFT_CLICK");
+
+    }
+
     public void dispose(){
 
     }
+
+
+
     public static void main(String[] args){
         new GameContainer().start();
     }
