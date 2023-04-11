@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added ItemLoader">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/blocks/woodBlock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/items/stick.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/game/block/BlockLoaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/GameContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/gameExceptions/RegistryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/exceptions/RegistryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/ItemCategory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/ItemFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/ItemLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/ItemRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/romsteam/clicker/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/game/item/ItemLoaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/game/item/ItemRegistryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +62,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "ignore.virus.scanning.warn.message": "true",
+    "last_directory_selection": "C:/Users/Chambre PC/IdeaProjects/Clicker/src/main/java/com/romsteam/clicker",
     "last_opened_file_path": "C:/Users/Chambre PC/IdeaProjects/Clicker/src/main/resources/items",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -115,7 +100,7 @@
       <recent name="com.romsteam.clicker.gameObjects.item" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BlockLoaderTest">
+  <component name="RunManager">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.HelloApplication" />
       <module name="clicker" />
@@ -288,6 +273,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
