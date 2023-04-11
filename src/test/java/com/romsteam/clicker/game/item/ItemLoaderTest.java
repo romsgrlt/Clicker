@@ -1,11 +1,9 @@
-package com.romsteam.clicker.gameObjects.item;
+package com.romsteam.clicker.game.item;
 
-import com.romsteam.clicker.gameObjects.gameExceptions.RegistryException;
+import com.romsteam.clicker.game.exceptions.RegistryException;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ItemLoaderTest {
     private static String TEST_PATH = "src/test/json/item";

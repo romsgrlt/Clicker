@@ -1,0 +1,19 @@
+{
+  "blockId": 1,
+  "blockName": "WoodBlock",
+  "blockCategory": "RESSOURCE",
+  "drops": [
+    {
+      "itemId": 1,
+      "minAmount": 3,
+      "maxAmount": 20,
+      "probability": 100
+    },
+    {
+      "itemId": 2,
+      "minAmount": 0,
+      "maxAmount": 5,
+      "probability": 33
+    }
+  ]
+}

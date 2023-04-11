@@ -1,6 +1,6 @@
-package com.romsteam.clicker.gameObjects;
+package com.romsteam.clicker.game.item;
 
-import com.romsteam.clicker.gameObjects.item.ItemCategory;
+import com.romsteam.clicker.game.item.ItemCategory;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;

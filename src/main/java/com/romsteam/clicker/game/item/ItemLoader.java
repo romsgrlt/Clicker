@@ -1,13 +1,12 @@
-package com.romsteam.clicker.gameObjects.item;
+package com.romsteam.clicker.game.item;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import com.romsteam.clicker.gameObjects.gameExceptions.RegistryException;
+import com.romsteam.clicker.game.exceptions.RegistryException;
 
 public class ItemLoader {
     public static String FOLDER_PATH = "src/main/resources/items";
