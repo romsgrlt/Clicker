@@ -65,7 +65,7 @@ public class GameContainer implements Runnable {
 
                 //TODO: update game
 
-                checkInputs();
+                intputControls();
 
                 input.update();
 
@@ -92,7 +92,8 @@ public class GameContainer implements Runnable {
         dispose();
     }
 
-    private void checkInputs() {
+    private void intputControls() {
+        //System.out.println("mouseX:"+input.getMouseX()+"\tmouseY:"+input.getMouseY());
 
         if(input.isKeyDown(KeyEvent.VK_Z))
             System.out.println("FORWARD");
@@ -102,18 +103,21 @@ public class GameContainer implements Runnable {
             System.out.println("BACKWARD");
         if(input.isKeyDown(KeyEvent.VK_D))
             System.out.println("RIGHT");
-        if(input.getScroll()!=0)
-            System.out.println(input.getScroll());
+
         if(input.isButtonDown(MouseEvent.BUTTON1))
             System.out.println("LEFT_CLICK");
+        if(input.isButtonDown(MouseEvent.BUTTON3))
+            System.out.println("RIGHT_CLICK");
+        if(input.isButtonDown(MouseEvent.BUTTON2))
+            System.out.println("WHEEL_CLICK");
 
+        if(input.getScroll()!=0)
+            System.out.println(input.getScroll());
     }
 
     public void dispose(){
 
     }
-
-
 
     public static void main(String[] args){
         new GameContainer().start();
