@@ -26,7 +26,7 @@ class ItemRegistryTest {
 
         Item item = createItem();
         itemRegistry.addNewItem(item);
-
+        System.out.println(itemRegistry);
         assertEquals(itemRegistry.getItem(1L),item);
     }
 

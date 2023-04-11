@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added ItemRegistry">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemRegistryTest.java" afterDir="false" />
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added ItemRegistryTest and fixed noRegisteringPb">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemLoaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/json/item/stone.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/json/item/wood.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/gameExceptions/RegistryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/gameExceptions/RegistryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/items/wood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/wood.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemRegistryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +64,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Chambre PC/IdeaProjects/Clicker/src/test/json/item",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,13 +73,16 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.romsteam.clicker.gameObjects" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Chambre PC\IdeaProjects\Clicker\src\test\json\item" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Chambre PC\IdeaProjects\Clicker" />
@@ -87,7 +94,7 @@
       <recent name="com.romsteam.clicker.gameObjects.item" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ItemRegistryTest.getItem">
+  <component name="RunManager" selected="JUnit.ItemLoaderTest.loadItems">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.HelloApplication" />
       <module name="clicker" />
@@ -97,6 +104,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemLoaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clicker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.romsteam.clicker.gameObjects.item.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.romsteam.clicker.gameObjects.item" />
+      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.gameObjects.item.ItemLoaderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ItemLoaderTest.loadItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clicker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.romsteam.clicker.gameObjects.item.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.romsteam.clicker.gameObjects.item" />
+      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.gameObjects.item.ItemLoaderTest" />
+      <option name="METHOD_NAME" value="loadItems" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,6 +157,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ItemLoaderTest.loadItems" />
+        <item itemvalue="JUnit.ItemLoaderTest" />
         <item itemvalue="JUnit.ItemRegistryTest.getItem" />
         <item itemvalue="Application.HelloApplication" />
       </list>
@@ -133,7 +173,8 @@
       <option name="presentableId" value="Default" />
       <updated>1681160594987</updated>
       <workItem from="1681160596651" duration="1300000" />
-      <workItem from="1681161923385" duration="5184000" />
+      <workItem from="1681161923385" duration="6767000" />
+      <workItem from="1681168712422" duration="3353000" />
     </task>
     <task id="LOCAL-00001" summary="initia">
       <created>1681160787638</created>
@@ -191,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681164544473</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added ItemRegistryTest and fixed noRegisteringPb">
+      <created>1681167232388</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681167232388</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +254,7 @@
     <MESSAGE value="implemented item Factory and Ressource creration" />
     <MESSAGE value="fix require lombok" />
     <MESSAGE value="added ItemRegistry" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ItemRegistry" />
+    <MESSAGE value="added ItemRegistryTest and fixed noRegisteringPb" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ItemRegistryTest and fixed noRegisteringPb" />
   </component>
 </project>
