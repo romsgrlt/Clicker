@@ -12,6 +12,7 @@ public class GameContainer implements Runnable {
 
     private Thread thread;
     private Window window;
+    private Renderer renderer;
 
     private boolean running = false;
     private final int FPS = 60;
@@ -19,6 +20,7 @@ public class GameContainer implements Runnable {
 
     public void start(){
         window = new Window(this);
+        renderer = new Renderer(this);
         thread = new Thread(this);
         thread.run();
     }
@@ -61,6 +63,7 @@ public class GameContainer implements Runnable {
                 }
             }
             if(render){
+                renderer.clear();
                 ++frames;
                 //TODO: render game
                 window.update();

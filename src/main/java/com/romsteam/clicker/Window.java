@@ -1,12 +1,14 @@
 package com.romsteam.clicker;
 
+import lombok.Getter;
+
 import javax.swing.JFrame;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.BufferedInputStream;
 
-
+@Getter
 public class Window {
     private JFrame frame;
     private BufferedImage image;

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added GameContainer with Loop">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Window.java" afterDir="false" />
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added Window">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Renderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/GameContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/GameContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681228165301</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added Window">
+      <created>1681229545861</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681229545861</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +313,8 @@
     <MESSAGE value="added ItemRegistryTest and fixed noRegisteringPb" />
     <MESSAGE value="added ItemLoader" />
     <MESSAGE value="added GameContainer with Loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="added GameContainer with Loop" />
+    <MESSAGE value="added Window" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Window" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
