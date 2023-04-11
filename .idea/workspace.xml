@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added GameManager">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/Image.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/items/rock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/cursor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/rock.png" afterDir="false" />
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added rock, cursor textures, rock json and rendering image">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/ImageTile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/cursorTiles.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/AbstractGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/AbstractGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/GameContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681242959949</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added rock, cursor textures, rock json and rendering image">
+      <created>1681248385370</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681248385370</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +351,8 @@
     <MESSAGE value="added inputsController" />
     <MESSAGE value="sorti les controls d'input dans une methode" />
     <MESSAGE value="added GameManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="added GameManager" />
+    <MESSAGE value="added rock, cursor textures, rock json and rendering image" />
+    <option name="LAST_COMMIT_MESSAGE" value="added rock, cursor textures, rock json and rendering image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

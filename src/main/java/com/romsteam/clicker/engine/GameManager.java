@@ -1,13 +1,18 @@
 package com.romsteam.clicker.engine;
 
 import com.romsteam.clicker.engine.gfx.Image;
+import com.romsteam.clicker.engine.gfx.ImageTile;
+import lombok.ToString;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.util.stream.Collectors;
 
 public class GameManager extends AbstractGame {
 
     private Image image = new Image("/items/textures/cursor.png");
+    private ImageTile imageTile = new ImageTile("/items/textures/cursorTiles.png",64,64);
 
     public GameManager(){
 
@@ -15,12 +20,23 @@ public class GameManager extends AbstractGame {
     @Override
     public void update(GameContainer gameContainer, float dt) {
         checkInputs(gameContainer);
-    }
 
+        //curseur animé
+        curstorStage+=dt*20;
+        if(curstorStage>19)
+            curstorStage=0;
+    }
+    float curstorStage = 0;
     @Override
     public void render(GameContainer gameContainer, Renderer renderer) {
-        renderer.drawImage(image,gameContainer.getInput().getMouseX(),gameContainer.getInput().getMouseY());
+
+        //rendu curseur
+        renderer.drawImageTile(imageTile,gameContainer.getInput().getMouseX(),gameContainer.getInput().getMouseY(),(int)curstorStage,0);
     }
+
+
+
+
 
     public static void main(String[] args){
         GameContainer gc = new GameContainer(new GameManager());
@@ -56,3 +72,15 @@ public class GameManager extends AbstractGame {
         input.update();
     }
 }
+@ToString
+    class ColorTemp {
+    int r,g,b;
+        ColorTemp(int x){
+            r=new Color(x).getRed();
+            g=new Color(x).getGreen();
+            b=new Color(x).getBlue();
+        }
+
+    }
+
+
