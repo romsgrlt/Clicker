@@ -6,8 +6,10 @@ import lombok.Getter;
 public class GameContainer implements Runnable {
 
     //Window Settings
-    private int width = 320, height = 240;
-    private float scale = 3.25f;
+    //private int width = 320, height = 240;
+    //private float scale = 3.25f;
+    private int width = 320*8, height = 240*8;
+    private float scale = 3.25f/8;
     private String title = "clickerV1.0";
 
 

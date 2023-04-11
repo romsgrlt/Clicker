@@ -36,6 +36,11 @@ public class Window {
         canvas.createBufferStrategy(2);
         bufferStrategy = canvas.getBufferStrategy();
         g = bufferStrategy.getDrawGraphics();
+
+        frame.setCursor( frame.getToolkit().createCustomCursor(
+                new BufferedImage( 1, 1, BufferedImage.TYPE_INT_ARGB ),
+                new Point(),
+                null ) );
     }
 
     public void update(){
