@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added ItemRegistryTest and fixed noRegisteringPb">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemLoaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/json/item/stone.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/json/item/wood.json" afterDir="false" />
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added ItemLoader">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/Block.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/blocks/woodBlock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/stick.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/game/block/BlockLoaderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/wood.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/wood.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemRegistryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/gameExceptions/RegistryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/exceptions/RegistryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/ItemCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/ItemFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/ItemLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/gameObjects/item/ItemRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/item/ItemRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/romsteam/clicker/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/game/item/ItemLoaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/gameObjects/item/ItemRegistryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/romsteam/clicker/game/item/ItemRegistryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +33,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -64,7 +78,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Chambre PC/IdeaProjects/Clicker/src/test/json/item",
+    "last_opened_file_path": "C:/Users/Chambre PC/IdeaProjects/Clicker/src/main/resources/items",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,9 +93,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.romsteam.clicker.game.block" />
       <recent name="com.romsteam.clicker.gameObjects" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Chambre PC\IdeaProjects\Clicker\src\main\resources\items" />
+      <recent name="C:\Users\Chambre PC\IdeaProjects\Clicker\src\main\resources\blocks" />
       <recent name="C:\Users\Chambre PC\IdeaProjects\Clicker\src\test\json\item" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -90,11 +107,15 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.romsteam.clicker.game.item" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.romsteam.clicker.game.block" />
       <recent name="com.romsteam.clicker.gameObjects.item" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ItemLoaderTest.loadItems">
+  <component name="RunManager" selected="JUnit.BlockLoaderTest">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.HelloApplication" />
       <module name="clicker" />
@@ -108,16 +129,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BlockLoaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="clicker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.romsteam.clicker.game.block.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.romsteam.clicker.game.block" />
+      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.game.block.BlockLoaderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ItemLoaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="clicker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.romsteam.clicker.gameObjects.item.*" />
+          <option name="PATTERN" value="com.romsteam.clicker.game.item.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.romsteam.clicker.gameObjects.item" />
-      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.gameObjects.item.ItemLoaderTest" />
+      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.game.item.ItemLoaderTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,12 +163,12 @@
       <module name="clicker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.romsteam.clicker.gameObjects.item.*" />
+          <option name="PATTERN" value="com.romsteam.clicker.game.item.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.romsteam.clicker.gameObjects.item" />
-      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.gameObjects.item.ItemLoaderTest" />
+      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.game.item.ItemLoaderTest" />
       <option name="METHOD_NAME" value="loadItems" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -143,12 +179,12 @@
       <module name="clicker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.romsteam.clicker.gameObjects.item.*" />
+          <option name="PATTERN" value="com.romsteam.clicker.game.item.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.romsteam.clicker.gameObjects.item" />
-      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.gameObjects.item.ItemRegistryTest" />
+      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.game.item.ItemRegistryTest" />
       <option name="METHOD_NAME" value="getItem" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -157,10 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BlockLoaderTest" />
+        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="JUnit.ItemLoaderTest.loadItems" />
         <item itemvalue="JUnit.ItemLoaderTest" />
         <item itemvalue="JUnit.ItemRegistryTest.getItem" />
-        <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +211,7 @@
       <updated>1681160594987</updated>
       <workItem from="1681160596651" duration="1300000" />
       <workItem from="1681161923385" duration="6767000" />
-      <workItem from="1681168712422" duration="3353000" />
+      <workItem from="1681168712422" duration="10665000" />
     </task>
     <task id="LOCAL-00001" summary="initia">
       <created>1681160787638</created>
@@ -239,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681167232388</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added ItemLoader">
+      <created>1681172389728</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681172389728</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +299,28 @@
     <MESSAGE value="fix require lombok" />
     <MESSAGE value="added ItemRegistry" />
     <MESSAGE value="added ItemRegistryTest and fixed noRegisteringPb" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ItemRegistryTest and fixed noRegisteringPb" />
+    <MESSAGE value="added ItemLoader" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ItemLoader" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockLoader.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockLoader.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.fasterxml.jackson.core.json.UTF8StreamJsonParser" memberName="_nextToken" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

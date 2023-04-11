@@ -1,7 +1,6 @@
-package com.romsteam.clicker.gameObjects.item;
+package com.romsteam.clicker.game.item;
 
-import com.romsteam.clicker.gameObjects.Item;
-import com.romsteam.clicker.gameObjects.gameExceptions.RegistryException;
+import com.romsteam.clicker.game.exceptions.RegistryException;
 import lombok.ToString;
 
 import java.util.HashMap;

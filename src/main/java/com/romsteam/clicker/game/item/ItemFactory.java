@@ -1,6 +1,4 @@
-package com.romsteam.clicker.gameObjects.item;
-
-import com.romsteam.clicker.gameObjects.Item;
+package com.romsteam.clicker.game.item;
 
 public class ItemFactory {
     public static Item createRessource(Long itemId, String itemName){

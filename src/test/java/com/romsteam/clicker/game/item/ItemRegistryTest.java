@@ -1,11 +1,9 @@
-package com.romsteam.clicker.gameObjects.item;
+package com.romsteam.clicker.game.item;
 
-import com.romsteam.clicker.gameObjects.Item;
-import com.romsteam.clicker.gameObjects.gameExceptions.RegistryException;
+import com.romsteam.clicker.game.exceptions.RegistryException;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 
 import java.util.HashMap;
 
