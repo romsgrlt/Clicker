@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added Renderer">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Input.java" afterDir="false" />
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="sorti les controls d'input dans une methode">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/AbstractGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/GameContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/GameContainer.java" afterDir="false" />
     </list>
@@ -101,7 +102,20 @@
       <recent name="com.romsteam.clicker.gameObjects.item" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GameManager">
+    <configuration name="GameManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.game.GameManager" />
+      <module name="clicker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.romsteam.clicker.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.HelloApplication" />
       <module name="clicker" />
@@ -161,29 +175,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ItemRegistryTest.getItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="clicker" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.romsteam.clicker.game.item.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.romsteam.clicker.gameObjects.item" />
-      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.game.item.ItemRegistryTest" />
-      <option name="METHOD_NAME" value="getItem" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameManager" />
         <item itemvalue="JUnit.BlockLoaderTest" />
         <item itemvalue="Application.HelloApplication" />
         <item itemvalue="JUnit.ItemLoaderTest.loadItems" />
         <item itemvalue="JUnit.ItemLoaderTest" />
-        <item itemvalue="JUnit.ItemRegistryTest.getItem" />
       </list>
     </recent_temporary>
   </component>
@@ -290,7 +288,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681230157759</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added inputsController">
+      <created>1681232266827</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681232266827</updated>
+    </task>
+    <task id="LOCAL-00015" summary="sorti les controls d'input dans une methode">
+      <created>1681232586305</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681232586305</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +333,9 @@
     <MESSAGE value="added GameContainer with Loop" />
     <MESSAGE value="added Window" />
     <MESSAGE value="added Renderer" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Renderer" />
+    <MESSAGE value="added inputsController" />
+    <MESSAGE value="sorti les controls d'input dans une methode" />
+    <option name="LAST_COMMIT_MESSAGE" value="sorti les controls d'input dans une methode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

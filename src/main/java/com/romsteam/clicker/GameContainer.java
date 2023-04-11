@@ -18,11 +18,15 @@ public class GameContainer implements Runnable {
     private Window window;
     private Renderer renderer;
     private Input input;
+    private AbstractGame game;
 
     private boolean running = false;
     private final int FPS = 60;
     private final double UPDATE_CAP = 1.0/FPS;
 
+    public GameContainer(AbstractGame game){
+        this.game = game;
+    }
 
     public void start(){
         window = new Window(this);
@@ -64,10 +68,8 @@ public class GameContainer implements Runnable {
                 render = true;
 
                 //TODO: update game
+                game.update(this, (float) UPDATE_CAP);
 
-                intputControls();
-
-                input.update();
 
                 if(frameTime >= 1.0){
                     frameTime=0;
@@ -80,6 +82,7 @@ public class GameContainer implements Runnable {
                 renderer.clear();
                 ++frames;
                 //TODO: render game
+                game.render(this,renderer);
                 window.update();
             }else{
                 try {
@@ -92,34 +95,8 @@ public class GameContainer implements Runnable {
         dispose();
     }
 
-    private void intputControls() {
-        //System.out.println("mouseX:"+input.getMouseX()+"\tmouseY:"+input.getMouseY());
-
-        if(input.isKeyDown(KeyEvent.VK_Z))
-            System.out.println("FORWARD");
-        if(input.isKeyDown(KeyEvent.VK_Q))
-            System.out.println("LEFT");
-        if(input.isKeyDown(KeyEvent.VK_S))
-            System.out.println("BACKWARD");
-        if(input.isKeyDown(KeyEvent.VK_D))
-            System.out.println("RIGHT");
-
-        if(input.isButtonDown(MouseEvent.BUTTON1))
-            System.out.println("LEFT_CLICK");
-        if(input.isButtonDown(MouseEvent.BUTTON3))
-            System.out.println("RIGHT_CLICK");
-        if(input.isButtonDown(MouseEvent.BUTTON2))
-            System.out.println("WHEEL_CLICK");
-
-        if(input.getScroll()!=0)
-            System.out.println(input.getScroll());
-    }
-
     public void dispose(){
 
     }
 
-    public static void main(String[] args){
-        new GameContainer().start();
-    }
 }
