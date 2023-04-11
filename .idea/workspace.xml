@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="sorti les controls d'input dans une methode">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/AbstractGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/GameManager.java" afterDir="false" />
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="added GameManager">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/rock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/cursor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/rock.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/GameContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/GameContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/AbstractGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/AbstractGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/GameContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,11 +111,11 @@
   </component>
   <component name="RunManager" selected="Application.GameManager">
     <configuration name="GameManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.game.GameManager" />
+      <option name="MAIN_CLASS_NAME" value="com.romsteam.clicker.engine.GameManager" />
       <module name="clicker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.romsteam.clicker.game.*" />
+          <option name="PATTERN" value="com.romsteam.clicker.engine.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,7 +128,7 @@
       <module name="clicker" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.romsteam.clicker.*" />
+          <option name="PATTERN" value="com.romsteam.clicker.engine.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -302,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681232586305</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added GameManager">
+      <created>1681242959949</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681242959949</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,20 +349,16 @@
     <MESSAGE value="added Renderer" />
     <MESSAGE value="added inputsController" />
     <MESSAGE value="sorti les controls d'input dans une methode" />
-    <option name="LAST_COMMIT_MESSAGE" value="sorti les controls d'input dans une methode" />
+    <MESSAGE value="added GameManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="added GameManager" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockLoader.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/romsteam/clicker/game/block/BlockLoader.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Input.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

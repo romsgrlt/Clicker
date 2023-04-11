@@ -1,14 +1,13 @@
-package com.romsteam.clicker.game;
+package com.romsteam.clicker.engine;
 
-import com.romsteam.clicker.AbstractGame;
-import com.romsteam.clicker.GameContainer;
-import com.romsteam.clicker.Input;
-import com.romsteam.clicker.Renderer;
+import com.romsteam.clicker.engine.gfx.Image;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 public class GameManager extends AbstractGame {
+
+    private Image image = new Image("/items/textures/cursor.png");
 
     public GameManager(){
 
@@ -20,7 +19,7 @@ public class GameManager extends AbstractGame {
 
     @Override
     public void render(GameContainer gameContainer, Renderer renderer) {
-
+        renderer.drawImage(image,gameContainer.getInput().getMouseX(),gameContainer.getInput().getMouseY());
     }
 
     public static void main(String[] args){

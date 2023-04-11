@@ -1,9 +1,6 @@
-package com.romsteam.clicker;
+package com.romsteam.clicker.engine;
 
 import lombok.Getter;
-
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
 
 @Getter
 public class GameContainer implements Runnable {

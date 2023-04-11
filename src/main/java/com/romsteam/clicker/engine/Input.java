@@ -1,4 +1,4 @@
-package com.romsteam.clicker;
+package com.romsteam.clicker.engine;
 
 import lombok.Getter;
 
@@ -97,14 +97,14 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        mouseX = (int) (e.getX()*gc.getScale());
-        mouseY = (int) (e.getY()*gc.getScale());
+        mouseX = (int) (e.getX()/gc.getScale());
+        mouseY = (int) (e.getY()/gc.getScale());
     }
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        mouseX = (int) (e.getX()*gc.getScale());
-        mouseY = (int) (e.getY()*gc.getScale());
+        mouseX = (int) (e.getX()/gc.getScale());
+        mouseY = (int) (e.getY()/gc.getScale());
     }
 
     @Override

@@ -1,0 +1,6 @@
+{
+  "itemId": 3,
+  "itemName": "Rock",
+  "itemCategory": "RESSOURCE",
+  "texturePath": "/items/textures/rock.png"
+}

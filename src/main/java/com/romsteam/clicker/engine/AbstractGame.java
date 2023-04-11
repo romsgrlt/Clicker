@@ -1,4 +1,4 @@
-package com.romsteam.clicker;
+package com.romsteam.clicker.engine;
 
 public abstract class AbstractGame {
     public abstract void update(GameContainer gameContainer, float dt);
