@@ -1,11 +1,24 @@
 package com.romsteam.clicker;
 
+import lombok.Getter;
+
+@Getter
 public class GameContainer implements Runnable {
+    //Window Settings
+    private int width = 320, height = 240;
+    private float scale = 3.25f;
+    private String title = "clickerV1.0";
+
+
     private Thread thread;
+    private Window window;
+
     private boolean running = false;
-    private final double UPDATE_CAP=1.0/60.0;
+    private final int FPS = 60;
+    private final double UPDATE_CAP = 1.0/FPS;
 
     public void start(){
+        window = new Window(this);
         thread = new Thread(this);
         thread.run();
     }
@@ -50,6 +63,7 @@ public class GameContainer implements Runnable {
             if(render){
                 ++frames;
                 //TODO: render game
+                window.update();
             }else{
                 try {
                     Thread.sleep(1);
@@ -62,5 +76,8 @@ public class GameContainer implements Runnable {
     }
     public void dispose(){
 
+    }
+    public static void main(String[] args){
+        new GameContainer().start();
     }
 }
