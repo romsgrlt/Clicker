@@ -1,5 +1,6 @@
 package com.romsteam.clicker.engine;
 
+import com.romsteam.clicker.engine.audio.SoundClip;
 import com.romsteam.clicker.engine.gfx.Image;
 import com.romsteam.clicker.engine.gfx.ImageTile;
 import lombok.ToString;
@@ -10,14 +11,14 @@ import java.awt.event.MouseEvent;
 
 public class GameManager extends AbstractGame {
     //var curseur
-    private Image image = new Image("/items/textures/cursor.png");
+    private Image image = new Image("/items/textures/cursorV2.png");
 
     //var curseur animé
     float curstorStage = 0;
-    private ImageTile imageTileCursor = new ImageTile("/items/textures/cursorTiles.png",64,64);
+    private ImageTile imageTileCursor = new ImageTile("/items/textures/cursorTilesV2.png",64,64);
 
     //var click animé
-    private ImageTile imageTileClick = new ImageTile("/items/textures/clickTiles.png",64,64);boolean animLeftClick = false;
+    private ImageTile imageTileClick = new ImageTile("/items/textures/clickTilesV2.png",64,64);boolean animLeftClick = false;
     float clickStage = 0;
 
     public GameManager(){
@@ -67,6 +68,7 @@ public class GameManager extends AbstractGame {
 
         if(input.isButtonDown(MouseEvent.BUTTON1)){
             animLeftClick = true;
+            SoundClip.EXPLOSION_TRANSITION_SOUND.play();
             System.out.println("LEFT_CLICK");
         }
         if(input.isButtonDown(MouseEvent.BUTTON3))
@@ -84,7 +86,6 @@ public class GameManager extends AbstractGame {
         GameContainer gc = new GameContainer(new GameManager());
         gc.start();
     }
-
 }
 
 

@@ -75,7 +75,7 @@ public class Renderer {
     }
 
     private void setPixel(int x, int y, int value) {
-        if(x<0||x>=pixelWidth||y<0||y>=pixelHeight||value==0xffff00ff)
+        if(x<0||x>=pixelWidth||y<0||y>=pixelHeight||((value>>24)&0xff)==0)
             return;
         pixels[x+y*pixelWidth]=value;
     }

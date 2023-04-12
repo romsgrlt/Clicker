@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="reorganized code, added left click animation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/Font.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/FontGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/font1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fonts/font2.png" afterDir="false" />
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="implemented Font">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/audio/SoundClip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/clickTilesV2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/cursorTilesV2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/cursorV2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/rockV2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/explosionTransition.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/items/rock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/rock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +96,7 @@
       <recent name="C:\Users\Chambre PC\IdeaProjects\Clicker\src\test\json\item" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Chambre PC\IdeaProjects\Clicker\src\main\resources\sounds" />
       <recent name="C:\Users\Chambre PC\IdeaProjects\Clicker" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -340,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681258715491</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="implemented Font">
+      <created>1681322830705</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681322830705</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +388,8 @@
     <MESSAGE value="added imageTile and changed cursor to animated cursor" />
     <MESSAGE value="rescales display and deleted cursor" />
     <MESSAGE value="reorganized code, added left click animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="reorganized code, added left click animation" />
+    <MESSAGE value="implemented Font" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented Font" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

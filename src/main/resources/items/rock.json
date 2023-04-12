@@ -2,5 +2,5 @@
   "itemId": 3,
   "itemName": "Rock",
   "itemCategory": "RESSOURCE",
-  "texturePath": "/items/textures/rock.png"
+  "texturePath": "/items/textures/rockV2.png"
 }

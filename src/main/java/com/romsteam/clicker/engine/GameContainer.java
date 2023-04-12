@@ -1,5 +1,6 @@
 package com.romsteam.clicker.engine;
 
+import com.romsteam.clicker.engine.audio.SoundClip;
 import com.romsteam.clicker.engine.gfx.Font;
 import lombok.Getter;
 
@@ -40,7 +41,7 @@ public class GameContainer implements Runnable {
 
     }
     public void run(){
-
+        SoundClip.EXPLOSION_TRANSITION_SOUND.play();
         running = true;
         boolean render = false;
 
