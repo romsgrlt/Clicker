@@ -2,31 +2,51 @@ package com.romsteam.clicker.engine;
 
 import com.romsteam.clicker.engine.gfx.Font;
 import com.romsteam.clicker.engine.gfx.Image;
+import com.romsteam.clicker.engine.gfx.ImageRequest;
 import com.romsteam.clicker.engine.gfx.ImageTile;
 
 import java.awt.*;
 import java.awt.image.DataBufferInt;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Renderer {
+    private List<ImageRequest> imageRequestList = new ArrayList<>();
 
     private int pixelWidth, pixelHeight;
     private int[] pixels;
+    private int[] zAxis;
+
+    public void setzDepth(int zDepth) {
+        this.zDepth = zDepth;
+    }
+
+    private int zDepth = 0;
+    private boolean processing = false;
+
     public Renderer(GameContainer gc){
 
         pixelWidth = gc.getWidth();
         pixelHeight = gc.getHeight();
         pixels = ((DataBufferInt) gc.getWindow().getImage().getRaster().getDataBuffer()).getData();
+        zAxis = new int[pixels.length];
 
     }
     public void clear(){
         for(int i = 0;i< pixels.length;++i){
             pixels[i]= 0;
+            zAxis[i]=0;
         }
     }
 
     public void drawImage(Image image, int offsetX, int offsetY){
+
+        if(image.isAlpha()&&!processing) {
+            imageRequestList.add(new ImageRequest(image, zDepth, offsetX, offsetY));
+            return;
+        }
+
         int newX = offsetX<0?-offsetX:0;
         int newY = offsetY<0?-offsetY:0;
         int newWidth = image.getWidth();
@@ -75,9 +95,43 @@ public class Renderer {
     }
 
     private void setPixel(int x, int y, int value) {
-        if(x<0||x>=pixelWidth||y<0||y>=pixelHeight||((value>>24)&0xff)==0)
+        int alpha = (value>>24)&0xff;
+        if(x<0||x>=pixelWidth||y<0||y>=pixelHeight||(alpha==0))
             return;
-        pixels[x+y*pixelWidth]=value;
+
+        int idPixel = x+y*pixelWidth;
+
+        if(zAxis[idPixel]>zDepth)
+            return;
+
+        zAxis[idPixel]=zDepth;
+
+        if(alpha==255)
+            pixels[idPixel]=value;
+        else{
+            int color = pixels[idPixel];
+            int red =  ((color>>16)&0xff) - (int)((((color>>16)&0xff)-((value>>16)&0xff))*(alpha/255f));
+            int green = ((color>>8)&0xff) - (int)((((color>>8)&0xff)-((value>>8)&0xff))*(alpha/255f));
+            int blue =  (color&0xff) - (int)(((color&0xff)-(value&0xff))*(alpha/255f));
+
+            pixels[idPixel]=(255<<24|red<<16|green<<8|blue);
+        }
+    }
+
+    public void process(){
+        processing = true;
+        imageRequestList.sort(new Comparator<ImageRequest>() {
+            @Override
+            public int compare(ImageRequest ir1, ImageRequest ir2) {
+                return ir1.getZDepth()== ir2.getZDepth()?0:ir1.getZDepth()>ir2.getZDepth()?1:-1;
+            }
+        });
+        for(ImageRequest imageRequest : imageRequestList){
+            zDepth=imageRequest.getZDepth();
+            drawImage(imageRequest.getImage(),imageRequest.getOffsetX(),imageRequest.getOffsetY());
+        }
+        imageRequestList.clear();
+        processing = false;
     }
 
     public static List<Integer> colorDegrade(int color1, int color2, int size){

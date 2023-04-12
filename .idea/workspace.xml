@@ -4,18 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="implemented Font">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/audio/SoundClip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/clickTilesV2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/cursorTilesV2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/cursorV2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/rockV2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/explosionTransition.wav" afterDir="false" />
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="implemented SoundClip and Color(255,0,255) display">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/ImageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/rockV3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameContainer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/items/rock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/rock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/items/textures/rockV2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/items/textures/rockV2.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681322830705</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="implemented SoundClip and Color(255,0,255) display">
+      <created>1681326688692</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681326688692</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +393,8 @@
     <MESSAGE value="rescales display and deleted cursor" />
     <MESSAGE value="reorganized code, added left click animation" />
     <MESSAGE value="implemented Font" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented Font" />
+    <MESSAGE value="implemented SoundClip and Color(255,0,255) display" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented SoundClip and Color(255,0,255) display" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

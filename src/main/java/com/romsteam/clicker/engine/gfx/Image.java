@@ -10,6 +10,7 @@ import java.io.IOException;
 public class Image {
     private int width,height;
     private int[] pixels;
+    private boolean alpha = false;
 
     public Image(String path){
         BufferedImage image = null;
@@ -25,5 +26,10 @@ public class Image {
         pixels = image.getRGB(0,0,width,height,null, 0, width);
 
         image.flush();
+    }
+
+    public Image setAlpha(boolean b) {
+        this.alpha=true;
+        return this;
     }
 }

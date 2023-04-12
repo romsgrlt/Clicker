@@ -10,6 +10,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 public class GameManager extends AbstractGame {
+    private Image imageRockV3 = new Image("/items/textures/rockV3.png").setAlpha(true);
+    private Image imageRockV2 = new Image("/items/textures/rockV2.png").setAlpha(true);
+
     //var curseur
     private Image image = new Image("/items/textures/cursorV2.png");
 
@@ -49,7 +52,14 @@ public class GameManager extends AbstractGame {
         if(animLeftClick)
             renderer.drawImageTile(imageTileClick,gameContainer.getInput().getMouseX()-imageTileClick.getTileWidth()/2,gameContainer.getInput().getMouseY()-imageTileClick.getTileHeight()/2,(int)clickStage,0);
         //rendu curseur
+        renderer.setzDepth(Integer.MAX_VALUE);
         renderer.drawImageTile(imageTileCursor,gameContainer.getInput().getMouseX(),gameContainer.getInput().getMouseY(),(int)curstorStage,0);
+
+        renderer.setzDepth(2);
+        renderer.drawImage(imageRockV3, gameContainer.getWidth()-imageRockV3.getWidth()-42,42);
+        renderer.setzDepth(1);
+        renderer.drawImage(imageRockV2, gameContainer.getWidth()-imageRockV2.getWidth()-10,10);
+
     }
 
     private void checkInputs(GameContainer gc) {
