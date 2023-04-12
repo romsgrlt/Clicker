@@ -18,10 +18,12 @@ public class GameManager extends AbstractGame {
 
     //vars curseur animé
     float curstorStage = 0;
-    private ImageTile imageTileCursor = new ImageTile("/items/textures/cursorTilesV2.png",64,64);
+    private ImageTile imageTileCursorV2 = new ImageTile("/items/textures/cursorTilesV2.png",64,64);
+    private ImageTile imageTileCursorV3 = new ImageTile("/items/textures/cursorTilesV3.png",64,64).setAlpha(true);
 
     //vars click animé
-    private ImageTile imageTileClick = new ImageTile("/items/textures/clickTilesV2.png",64,64);boolean animLeftClick = false;
+    private ImageTile imageTileClickV2 = new ImageTile("/items/textures/clickTilesV2.png",64,64);boolean animLeftClick = false;
+    private ImageTile imageTileClickV3 = new ImageTile("/items/textures/clickTilesV3.png",64,64).setAlpha(true);
     float clickStage = 0;
 
     public GameManager(){
@@ -53,12 +55,13 @@ public class GameManager extends AbstractGame {
     public void render(GameContainer gameContainer, Renderer renderer) {
 
         //rendu animation click
-        if(animLeftClick)
-            renderer.drawImageTile(imageTileClick,gameContainer.getInput().getMouseX()-imageTileClick.getTileWidth()/2,gameContainer.getInput().getMouseY()-imageTileClick.getTileHeight()/2,(int)clickStage,0);
-
+        if(animLeftClick) {
+            renderer.setzDepth(Integer.MAX_VALUE);
+            renderer.drawImageTile(imageTileClickV3, gameContainer.getInput().getMouseX() - imageTileClickV3.getTileWidth() / 2, gameContainer.getInput().getMouseY() - imageTileClickV3.getTileHeight() / 2, (int) clickStage, 0);
+        }
         //rendu curseur
-        renderer.setzDepth(Integer.MAX_VALUE);
-        renderer.drawImageTile(imageTileCursor,gameContainer.getInput().getMouseX(),gameContainer.getInput().getMouseY(),(int)curstorStage,0);
+        renderer.setzDepth(Integer.MAX_VALUE-1);
+        renderer.drawImageTile(imageTileCursorV3,gameContainer.getInput().getMouseX(),gameContainer.getInput().getMouseY(),(int)curstorStage,0);
 
         //rendu rocks exemple surpassement
         renderer.setzDepth(2);

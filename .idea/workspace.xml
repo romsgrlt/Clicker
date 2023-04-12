@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="implemented zDepth, and overDisplaying">
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="lisibility GameManager.java">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/clickTilesV3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/items/textures/cursorTilesV3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/ImageTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/gfx/ImageTile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681332362920</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="lisibility GameManager.java">
+      <created>1681332586405</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1681332586405</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +408,8 @@
     <MESSAGE value="implemented Font" />
     <MESSAGE value="implemented SoundClip and Color(255,0,255) display" />
     <MESSAGE value="implemented zDepth, and overDisplaying" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented zDepth, and overDisplaying" />
+    <MESSAGE value="lisibility GameManager.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="lisibility GameManager.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

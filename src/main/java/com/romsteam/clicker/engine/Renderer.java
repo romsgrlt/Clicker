@@ -60,6 +60,11 @@ public class Renderer {
     }
 
     public void drawImageTile(ImageTile imageTile, int offsetX, int offsetY, int tileX, int tileY){
+        if(imageTile.isAlpha()&&!processing){
+            imageRequestList.add(new ImageRequest(imageTile.getTileImage(tileX,tileY),zDepth,offsetX,offsetY));
+            return;
+        }
+
         int newX = offsetX<0?-offsetX:0;
         int newY = offsetY<0?-offsetY:0;
         int newWidth = imageTile.getTileWidth();

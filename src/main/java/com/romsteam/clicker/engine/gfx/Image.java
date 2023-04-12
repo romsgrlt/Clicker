@@ -28,6 +28,12 @@ public class Image {
         image.flush();
     }
 
+    public Image(int[] pixels, int width, int height) {
+        this.pixels=pixels;
+        this.width=width;
+        this.height=height;
+    }
+
     public Image setAlpha(boolean b) {
         this.alpha=true;
         return this;
