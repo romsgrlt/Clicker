@@ -1,5 +1,6 @@
 package com.romsteam.clicker.engine;
 
+import com.romsteam.clicker.engine.gfx.Font;
 import com.romsteam.clicker.engine.gfx.Image;
 import com.romsteam.clicker.engine.gfx.ImageTile;
 
@@ -52,6 +53,25 @@ public class Renderer {
                 pixel += (tileY*imageTile.getTileHeight()+y)*imageTile.getWidth();
                 setPixel(x + offsetX, y + offsetY, imageTile.getPixels()[pixel]);
             }
+    }
+
+    public void drawText(String text, int offsetX, int offsetY, int color, Font font){
+        Image fontImage = font.getFontImage();
+
+        int offset = 0;
+
+        for(int i = 0;i<text.length();++i){
+            int unicode = text.codePointAt(i);
+
+            for(int y = 0;y< fontImage.getHeight();++y){
+                for(int x = 0;x<font.getWidths()[unicode];++x){
+                    if(fontImage.getPixels()[x+font.getOffsets()[unicode]+y*fontImage.getWidth()]==0xffffffff){
+                        setPixel(x+offsetX+offset,y+offsetY,color);
+                    }
+                }
+            }
+            offset+=font.getWidths()[unicode];
+        }
     }
 
     private void setPixel(int x, int y, int value) {

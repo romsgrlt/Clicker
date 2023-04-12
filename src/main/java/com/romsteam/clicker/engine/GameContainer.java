@@ -1,5 +1,6 @@
 package com.romsteam.clicker.engine;
 
+import com.romsteam.clicker.engine.gfx.Font;
 import lombok.Getter;
 
 @Getter
@@ -74,14 +75,14 @@ public class GameContainer implements Runnable {
                     frameTime=0;
                     fps = frames;
                     frames = 0;
-                    System.out.println("FPS: "+fps);
                 }
             }
             if(render){
                 renderer.clear();
                 ++frames;
-                //TODO: render game
+
                 game.render(this,renderer);
+                renderer.drawText("Fps:"+fps,10,10,0xffffffff, Font.CHINYEN_FONT);
                 window.update();
             }else{
                 try {
