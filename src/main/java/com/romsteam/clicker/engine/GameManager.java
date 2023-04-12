@@ -16,11 +16,11 @@ public class GameManager extends AbstractGame {
     //var curseur
     private Image image = new Image("/items/textures/cursorV2.png");
 
-    //var curseur animé
+    //vars curseur animé
     float curstorStage = 0;
     private ImageTile imageTileCursor = new ImageTile("/items/textures/cursorTilesV2.png",64,64);
 
-    //var click animé
+    //vars click animé
     private ImageTile imageTileClick = new ImageTile("/items/textures/clickTilesV2.png",64,64);boolean animLeftClick = false;
     float clickStage = 0;
 
@@ -31,12 +31,14 @@ public class GameManager extends AbstractGame {
 
     @Override
     public void update(GameContainer gameContainer, float dt) {
+
         checkInputs(gameContainer);
 
         //curseur animé
         curstorStage+=dt*20;
         if(curstorStage>19)
             curstorStage=0;
+
         //clic animé
         if(animLeftClick){
             clickStage+=dt*30;
@@ -49,12 +51,16 @@ public class GameManager extends AbstractGame {
 
     @Override
     public void render(GameContainer gameContainer, Renderer renderer) {
+
+        //rendu animation click
         if(animLeftClick)
             renderer.drawImageTile(imageTileClick,gameContainer.getInput().getMouseX()-imageTileClick.getTileWidth()/2,gameContainer.getInput().getMouseY()-imageTileClick.getTileHeight()/2,(int)clickStage,0);
+
         //rendu curseur
         renderer.setzDepth(Integer.MAX_VALUE);
         renderer.drawImageTile(imageTileCursor,gameContainer.getInput().getMouseX(),gameContainer.getInput().getMouseY(),(int)curstorStage,0);
 
+        //rendu rocks exemple surpassement
         renderer.setzDepth(2);
         renderer.drawImage(imageRockV3, gameContainer.getWidth()-imageRockV3.getWidth()-42,42);
         renderer.setzDepth(1);
@@ -64,8 +70,6 @@ public class GameManager extends AbstractGame {
 
     private void checkInputs(GameContainer gc) {
         Input input = gc.getInput();
-
-        //System.out.println("mouseX:"+input.getMouseX()+"\tmouseY:"+input.getMouseY());
 
         if(input.isKeyDown(KeyEvent.VK_Z))
             System.out.println("FORWARD");
