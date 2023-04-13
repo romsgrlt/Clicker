@@ -40,8 +40,8 @@ public class GameContainer implements Runnable {
     public void stop(){
 
     }
+
     public void run(){
-        SoundClip.EXPLOSION_TRANSITION_SOUND.play();
         running = true;
         boolean render = false;
 
