@@ -85,7 +85,6 @@ public class GameContainer implements Runnable {
                 game.render(this,renderer);
                 renderer.process();
 
-                renderer.drawText("Fps:"+fps,10,10,0xffffffff, Font.CHINYEN_FONT);
                 window.update();
             }else{
                 try {

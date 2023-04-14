@@ -80,23 +80,42 @@ public class Renderer {
             }
     }
 
-    public void drawText(String text, int offsetX, int offsetY, int color, Font font){
+    boolean draw = true;
+    int ct = 0;
+
+    public void drawText(String text, int offsetX, int offsetY, int color, Font font, boolean b){
         Image fontImage = font.getFontImage();
 
-        int offset = 0;
+        int offsetx = 0;
+        int offsety = 0;
 
         for(int i = 0;i<text.length();++i){
             int unicode = text.codePointAt(i);
+            if(unicode!=10){
+                for(int y = 0;y< fontImage.getHeight();++y)
+                    for(int x = 0;x<font.getWidths()[unicode];++x)
+                        if(fontImage.getPixels()[x+font.getOffsets()[unicode]+y*fontImage.getWidth()]==0xffffffff)
+                            setPixel(x+offsetX+offsetx,y+offsetY+offsety,color);
 
-            for(int y = 0;y< fontImage.getHeight();++y){
-                for(int x = 0;x<font.getWidths()[unicode];++x){
-                    if(fontImage.getPixels()[x+font.getOffsets()[unicode]+y*fontImage.getWidth()]==0xffffffff){
-                        setPixel(x+offsetX+offset,y+offsetY,color);
-                    }
-                }
+                offsetx+=font.getWidths()[unicode];
             }
-            offset+=font.getWidths()[unicode];
+            else{
+                offsetx = 0;
+                offsety +=fontImage.getHeight()+10;
+            }
+            if(i == text.length()-1&& b){
+                int width = font.getWidths()[unicode];
+                for(int y = 0; y< fontImage.getHeight();++y)
+                    setPixel(offsetX+offsetx+10,y+offsetY+offsety-3,0xffffffff);
+            }
         }
+    }
+
+    public void drawCircle(int offsetX,int offsetY, int radius, int color){
+        for(int y=offsetY-radius;y<offsetY+radius;++y)
+            for(int x = offsetX-radius;x<offsetX+radius;++x)
+                if(Math.sqrt((x-offsetX)*(x-offsetX)+(y-offsetY)*(y-offsetY))<radius)
+                    setPixel(x,y,color);
     }
 
     private void setPixel(int x, int y, int value) {

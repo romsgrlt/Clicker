@@ -1,6 +1,7 @@
 package com.romsteam.clicker.engine;
 
 import com.romsteam.clicker.engine.audio.SoundClip;
+import com.romsteam.clicker.engine.gfx.Font;
 import com.romsteam.clicker.engine.gfx.Image;
 import com.romsteam.clicker.engine.gfx.ImageTile;
 import lombok.ToString;
@@ -8,6 +9,7 @@ import lombok.ToString;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class GameManager extends AbstractGame {
     private Image imageRockV3 = new Image("/items/textures/rockV3.png").setAlpha(true);
@@ -26,6 +28,10 @@ public class GameManager extends AbstractGame {
     private ImageTile imageTileClickV3 = new ImageTile("/items/textures/clickTilesV3.png",64,64).setAlpha(true);
     float clickStage = 0;
 
+    //vars textBar animé
+    float  textBarStage = 0;
+
+
     public GameManager(){
 
     }
@@ -41,6 +47,11 @@ public class GameManager extends AbstractGame {
         if(curstorStage>19)
             curstorStage=0;
 
+        //textBar animé
+        textBarStage+=dt;
+        if(textBarStage>1)
+            textBarStage=0;
+
         //clic animé
         if(animLeftClick){
             clickStage+=dt*30;
@@ -53,7 +64,11 @@ public class GameManager extends AbstractGame {
 
     @Override
     public void render(GameContainer gameContainer, Renderer renderer) {
-
+        for(int i =0;i<points.size()/2;++i){
+        renderer.drawCircle(points.get(i*2),points.get(i*2+1),5,0xffff0000);
+        }
+        renderer.setzDepth(Integer.MAX_VALUE-2);
+        renderer.drawText(message.toString(),10,10,0xffffffff, Font.CHINYEN_FONT,textBarStage<0.5);
         //rendu animation click
         if(animLeftClick) {
             renderer.setzDepth(Integer.MAX_VALUE);
@@ -63,16 +78,28 @@ public class GameManager extends AbstractGame {
         renderer.setzDepth(Integer.MAX_VALUE-1);
         renderer.drawImageTile(imageTileCursorV3,gameContainer.getInput().getMouseX(),gameContainer.getInput().getMouseY(),(int)curstorStage,0);
 
-        //rendu rocks exemple surpassement
-        renderer.setzDepth(2);
-        renderer.drawImage(imageRockV3, gameContainer.getWidth()-imageRockV3.getWidth()-42,42);
-        renderer.setzDepth(1);
-        renderer.drawImage(imageRockV2, gameContainer.getWidth()-imageRockV2.getWidth()-10,10);
 
     }
+    StringBuilder message = new StringBuilder();
+
+    ArrayList<Integer> points = new ArrayList<>();
+
 
     private void checkInputs(GameContainer gc) {
         Input input = gc.getInput();
+        for(int i = 0;i<256;++i)
+            if(input.isKeyDown(i)) {
+                int click = (int) Math.random()*4;
+                SoundClip.clicks[click].play();
+                if(i==8) {
+                    if (message.length() > 0)
+                        message.deleteCharAt(message.length() - 1);
+                }else {
+                    message.append((char) i);
+                    System.out.println(i);
+                    System.out.println(message);
+                }
+            }
 
         if(input.isKeyDown(KeyEvent.VK_Z))
             System.out.println("FORWARD");
@@ -85,9 +112,13 @@ public class GameManager extends AbstractGame {
 
         if(input.isButtonDown(MouseEvent.BUTTON1)){
             animLeftClick = true;
-            SoundClip.EXPLOSION_TRANSITION_SOUND.play();
+            //SoundClip.EXPLOSION_TRANSITION_SOUND.play();
             System.out.println("LEFT_CLICK");
         }
+        if(input.isButton(MouseEvent.BUTTON1)){
+
+            points.add(input.getMouseX());
+        points.add(input.getMouseY());}
         if(input.isButtonDown(MouseEvent.BUTTON3))
             System.out.println("RIGHT_CLICK");
         if(input.isButtonDown(MouseEvent.BUTTON2))

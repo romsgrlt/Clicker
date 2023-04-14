@@ -10,6 +10,8 @@ public class SoundClip {
     private static final String EXPLOSION_TRANSITION_SOUND_PATH = "/sounds/explosionTransition.wav";
     public static SoundClip EXPLOSION_TRANSITION_SOUND = new SoundClip(EXPLOSION_TRANSITION_SOUND_PATH);
 
+    public static SoundClip[]  clicks = {new SoundClip("/sounds/Clicks/click1.wav"),new SoundClip("/sounds/Clicks/click2.wav"),new SoundClip("/sounds/Clicks/click3.wav"),new SoundClip("/sounds/Clicks/click4.wav")};
+
     private Clip clip;
     private FloatControl gainGontrol;
 

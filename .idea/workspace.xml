@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="imageTile with opacity">
+    <list default="true" id="bc498e59-c745-43c4-a034-2fae0f5ec3de" name="Changes" comment="deleted sound play when starting the game">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/Clicks/click1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/Clicks/click2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/Clicks/click3.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/Clicks/click4.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/audio/SoundClip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/romsteam/clicker/engine/audio/SoundClip.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -368,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681335466138</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="deleted sound play when starting the game">
+      <created>1681410900578</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681410900578</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +426,8 @@
     <MESSAGE value="implemented zDepth, and overDisplaying" />
     <MESSAGE value="lisibility GameManager.java" />
     <MESSAGE value="imageTile with opacity" />
-    <option name="LAST_COMMIT_MESSAGE" value="imageTile with opacity" />
+    <MESSAGE value="deleted sound play when starting the game" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted sound play when starting the game" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
